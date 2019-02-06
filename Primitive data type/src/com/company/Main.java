@@ -29,6 +29,12 @@ public class Main {
         numString=numString+"100.50";
         System.out.println(numString);
 
+        float floatValue=455.323f; //It is necessary to add f at last for the float value or We can do as follows.
+        System.out.println(floatValue);
+        Float float_Value=new Float(344.54);
+        System.out.println(float_Value);
+        double double_value=43544.343;
+        System.out.println(double_value);
 
         String string="10";
         int num=50;
