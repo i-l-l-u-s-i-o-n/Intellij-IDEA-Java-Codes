@@ -1,0 +1,51 @@
+
+// Created by Shivam Shukla.
+
+Strongest access specifier is "Private".
+
+After that "protected",
+
+Then "default",
+
+and then "public".
+
+So "public" is weakest access specifier.
+
+
+
+____________________________________________________________________
+Rules for OVERRIDING ->>>>>>>>>>>>>>>>>>>>>>>>>>		
+____________________________________________________________________
+
+
+
+We can override method having "weaker" access specifier to "stronger" one.
+
+Eg:->
+
+if there is method ->
+
+protected void show(){
+	......
+	......
+}
+
+then we can override it only with "protected" or "private".
+
+overriding as public is not allowed.
+
+private void show(){
+	....
+	....
+}
+
+
+OR
+
+
+protected void show(){
+	....
+	....
+}
+
+
