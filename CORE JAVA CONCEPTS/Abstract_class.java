@@ -3,7 +3,7 @@
 
 abstract class Vehicle{
 	// Abstract class can have variables.
-	// Also can hava static and final variables.
+	// Also can have static and final variables.
 	String name;
 	static final int ID=544;
 	
