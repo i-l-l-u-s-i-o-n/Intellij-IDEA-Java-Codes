@@ -1,5 +1,7 @@
 
-// Created by Shivam Shukla.class A{
+// Created by Shivam Shukla.
+
+class A{
 	int count=5;
 	
 	A(int c){
