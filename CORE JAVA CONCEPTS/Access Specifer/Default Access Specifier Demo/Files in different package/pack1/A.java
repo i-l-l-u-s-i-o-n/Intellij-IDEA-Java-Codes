@@ -1,6 +1,8 @@
 
 // Created by Shivam Shukla.
 
+package pack1;
+
 class A{
 	int count=5;
 	
