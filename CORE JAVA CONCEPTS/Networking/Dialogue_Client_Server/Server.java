@@ -15,6 +15,9 @@ class Server{
     public static void main(String[] args) {
 
         try {
+			
+			 // In case to communicate with different machine, we have to specify the IP address of that machine.
+            // ServerSocket ss1=new ServerSocket(3333,2, InetAddress.getByName("10.23.1.22"));
 
             ServerSocket ss=new ServerSocket(6666);
             Socket s=ss.accept();
