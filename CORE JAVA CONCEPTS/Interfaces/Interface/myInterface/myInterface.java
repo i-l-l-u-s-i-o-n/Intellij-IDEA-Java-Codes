@@ -11,6 +11,10 @@ package myInterface;
 //Eg - Serializable, Clonable, RandomAccess, SingleThreadModel
 
 
+//Prior to java 1.8, methods are always ABSTRACT.
+// After java 1.8, methods can be DEFAULT and STATIC in an interface.
+
+
 public interface myInterface {
 	
 	// Fields are public static final .
