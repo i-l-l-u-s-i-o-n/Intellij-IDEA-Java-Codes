@@ -3,6 +3,12 @@
 
 package myInterface;
 
+//Some Eg - Comparable, Runnable,Callable etc.
+
+//The interfaces, which do not have any methods but provide some ability to objects are called - MARKER Interface.
+//Eg - Serializable, Clonable, RandomAccess, SingleThreadModel
+
+
 public interface myInterface {
 	
 	// Fields are public static final .
