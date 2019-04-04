@@ -3,7 +3,9 @@
 
 package myInterface;
 
-//Some Eg - Comparable, Runnable,Callable etc.
+
+//The interfaces which have only SINGLE ABSTRACT METHOD(SAM) are called FUNCTIONAL INTERFACES.
+//Some Eg - Comparable(compareTo()) , Runnable(run()) ,Callable(call()) etc.
 
 //The interfaces, which do not have any methods but provide some ability to objects are called - MARKER Interface.
 //Eg - Serializable, Clonable, RandomAccess, SingleThreadModel
