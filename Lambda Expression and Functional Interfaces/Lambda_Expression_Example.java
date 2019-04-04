@@ -81,8 +81,17 @@ public class Lambda_Expression_Example {
 
         //Eg3.
 
-        //Square square= (int n) -> { return  n*n ;};
-        //Square square= (n) -> { return n*n;};
+        //Square square= (int n) -> { return  n*n ;};    //VALID
+        //Square square= (n) -> { return n*n;};         // VALID
+
+        //==============================================================================================//
+        //          If we use {} , then we must use return keyword to return some value .               //
+        //                Square square=n -> {return n*n;};  // VALID                                   //
+        //                Square square=n -> {n*n;};         // INVALID                                 //
+        //                                                                                              //
+        //          Without {}, we CAN'T use RETURN statement.                                          //
+        //                 Square square= n -> return n*n; // INVALID                                   //
+        //==============================================================================================//
         Square square= n -> n*n;
 
         System.out.println("Square : "+square.sqr(12));
