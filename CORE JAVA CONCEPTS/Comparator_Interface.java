@@ -60,6 +60,10 @@ public class Comparator_Interface {
 
         marks.sort(desc_order);
         System.out.println("MARKS in DESCENDING order : "+marks);
+        
+        // We can also do like this ->
+        // marks.sort((i1, i2) -> (i1>i2)? -1 : (i1<i2) ? 1: 0);
+      
 
 
     }
