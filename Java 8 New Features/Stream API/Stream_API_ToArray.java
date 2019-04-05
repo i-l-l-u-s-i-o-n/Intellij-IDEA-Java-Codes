@@ -37,6 +37,10 @@ public class Stream_API_ToArray {
 
         Stream.of(arr).forEach( i -> System.out.println(i));
 
+        // To store stream type, we can do->
+        Stream<Integer> s=Stream.of(arr);
+
+        // Now we can apply various stream operations on s.
     }
 
 }
