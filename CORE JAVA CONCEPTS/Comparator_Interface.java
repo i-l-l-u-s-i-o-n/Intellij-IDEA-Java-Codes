@@ -27,7 +27,7 @@ import java.util.Comparator;
 class Asc_order implements Comparator<Integer>{
 
     public int compare(Integer i1,Integer i2){
-        return i1-i2;            // If i1 is greater than i2,  it will return +ve, which means, i1 has to come after i1.
+        return i1-i2;            // If i1 is greater than i2,  it will return +ve, which means, i1 has to come after i2.
     }
 }
 
@@ -64,5 +64,14 @@ public class Comparator_Interface {
 
     }
 }
+
+/*
+OUTPUT ->
+
+
+MARKS in ASCENDING order : [70, 76, 80, 88, 89, 90, 95, 97]
+MARKS in DESCENDING order : [97, 95, 90, 89, 88, 80, 76, 70]
+
+*/
 
 
