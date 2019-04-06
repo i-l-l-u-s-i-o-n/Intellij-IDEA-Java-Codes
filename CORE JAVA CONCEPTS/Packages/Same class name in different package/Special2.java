@@ -4,11 +4,6 @@
 import myPackage1.Special;
 
 
-interface i{
-    int id=12;
-
-}
-class b implements i{
 
 public class Special2{               
 	  
