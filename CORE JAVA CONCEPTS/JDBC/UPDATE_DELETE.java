@@ -5,9 +5,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+
 /**
  * created by Shivam on 06-04-2019.
  */
+
+
 public class UPDATE_DELETE {
 
     public static void main(String[] args) {
@@ -21,13 +24,12 @@ public class UPDATE_DELETE {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            conn= DriverManager.getConnection("jdbc:mysql://localhost/test","root","vision22@");
+            conn= DriverManager.getConnection("jdbc:mysql://localhost/test","root","1234");
 
             statement=conn.createStatement();
 
             // SQL for UPDATING a record
-            String UPDATE_RECORD="UPDATE Student SET Marks=90 WHERE Name='Shivam Shukla'";
-
+            String UPDATE_RECORD="UPDATE Student SET Marks=91 WHERE Name='Shivam Shukla'";
 
 
 
@@ -46,20 +48,35 @@ public class UPDATE_DELETE {
             }
 
 
+            // No. of records ->
 
-
-
-
+            resultSet.last();
+            int no_of_records=resultSet.getRow();
+            System.out.println(no_of_records);
 
 
         }catch (Exception e){
             System.out.println(e.getMessage());
+        }finally {
+            try {
+                if (resultSet!=null){
+                    resultSet.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                    System.out.println("Connection closed !");
+                }
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
         }
 
     }
 
 }
+
 // OUTPUT ->
+
 
 /*
 
