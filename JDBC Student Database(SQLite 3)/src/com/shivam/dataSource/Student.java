@@ -1,4 +1,4 @@
-package com.company.dataSource;
+package com.shivam.dataSource;
 
 public class Student {
     private String name;

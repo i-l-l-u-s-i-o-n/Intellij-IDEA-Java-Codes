@@ -1,4 +1,4 @@
-package com.company.dataSource;
+package com.shivam.dataSource;
 
 import java.sql.*;
 import java.util.ArrayList;
