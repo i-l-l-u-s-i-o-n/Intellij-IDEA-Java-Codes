@@ -1,0 +1,32 @@
+ans1:)
+
+select name,rollno from student where branch='CSE' order by rollno;
+
+ans2:)
+
+select name from student 
+INNER JOIN Issue ON student.rollno=issue.rollno
+INNER JOIN book ON book.isbn=issue.isbn 
+where book.publisher='TATA MAGROW';
+
+ans3:)
+
+select title,author from student 
+INNER JOIN issue ON student.rollno=issue.rollno 
+INNER JOIN book ON book.isbn=issue.isbn 
+where student.name like 'R%';
+
+ans4:)    ------------------>>>>>> Date should be TEXT in SQLITE3 
+          ------------------>>>>>> and should be inserted as "2015-10-22 00:00:00"
+
+select title from issue 
+INNER JOIN book ON book.isbn=issue.isbn 
+where date_of_issue<='2015-10-23 00:00:00';
+
+ans5:)
+
+select name,title,author from student 
+INNER JOIN issue ON student.rollno=issue.rollno 
+INNER JOIN book ON book.isbn=issue.isbn 
+where book.author='JAMES GOSSLING';
+
