@@ -7,6 +7,10 @@ import java.io.*;
 
 // The process of saving state of an object to file.
 // The process of converting object from java specific form to file supported form or network supported form is called serialization.
+
+// A class must implement Serializable for serialization.
+
+    // Serializable is a MARKER INTERFACE as it doesn't has any method.It only provides ability to class.
 class Dog implements Serializable{
 
     String name;
