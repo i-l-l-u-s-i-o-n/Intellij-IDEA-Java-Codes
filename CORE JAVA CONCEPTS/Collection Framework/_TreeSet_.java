@@ -69,11 +69,24 @@ public class _TreeSet_ {
         //--------------------------------------------------------//
 
         // If we use String, then we can simply use first constructor.
+        // All WRAPPER class and String class already implements Comparable!
         // BUT if we use StringBuffer, we will get a class cast exception as it doesn't implement Comparable.
         // So in case of user defined classes, we must implement Comparable Interface to define natural sorting order.
 
 
 
+        TreeSet<String> strings = new TreeSet<>();
+
+        strings.add("SHIVAM");
+        strings.add("Shivam");
+        strings.add("ShiVAm");
+        strings.add("sHIVAM");
+        strings.add("shivam");
+        strings.add("sh");
+
+        
+        // a > A  as 97 > 65 (unicode value) 
+        System.out.println(strings);  //[SHIVAM, ShiVAm, Shivam, sHIVAM, sh, shivam]   
 
 
 
