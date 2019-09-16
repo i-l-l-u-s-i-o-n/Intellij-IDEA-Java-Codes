@@ -26,6 +26,9 @@ public class Iterator_Cursor {
                 // It is applicable to any Collection object and hence it is UNIVERSAL CURSOR.
                 // We can perform both read and remove operation!!!!!!!!
                 // The Iterator object can be created using .iterator() on collection object.
+                // It's limitation is that it can only move in FORWARD direction, not in reverse!!
+                // To overcome this problem, we can use ListIterator but it also has certain limitations!!
+
 
         ArrayList<Integer> integers = new ArrayList<>();
 
