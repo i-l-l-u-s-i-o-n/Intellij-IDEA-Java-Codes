@@ -25,6 +25,8 @@ import java.util.TreeSet;
 
 
     // TreeSet properties->
+
+        // Internal Data Structure is BALANCED TREE!!!!!!!
         // Duplicates NOT allowed.
         // NULL Insertion ->
                     // If TS is empty, we can insert null.
@@ -73,20 +75,23 @@ public class _TreeSet_ {
         // BUT if we use StringBuffer, we will get a class cast exception as it doesn't implement Comparable.
         // So in case of user defined classes, we must implement Comparable Interface to define natural sorting order.
 
+        // While adding elements to tree set, JVM will call compareTo() of Comparable interface for natural sorting order.
+
+        // If default natural sorting order is not available by Comparable , the we can go for CUSTOMISED SORTING ORDER using COMPARATOR Interface.
 
 
         TreeSet<String> strings = new TreeSet<>();
 
         strings.add("SHIVAM");
-        strings.add("Shivam");
+        strings.add("Shivam");  // "Shivam".compareTo("SHIVAM") -> returns +1 so "Shivam" will come after "SHIVAM"
         strings.add("ShiVAm");
         strings.add("sHIVAM");
         strings.add("shivam");
         strings.add("sh");
 
-        
-        // a > A  as 97 > 65 (unicode value) 
-        System.out.println(strings);  //[SHIVAM, ShiVAm, Shivam, sHIVAM, sh, shivam]   
+
+        // a > A  as 97 > 65 (unicode value)
+        System.out.println(strings);  //[SHIVAM, ShiVAm, Shivam, sHIVAM, sh, shivam]
 
 
 
