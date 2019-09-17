@@ -53,6 +53,10 @@ import java.util.*;
 
     // Constructors -> 4 constructors, same as HshSet.
 
+
+    // To get a synchronised version of HashMap, we can use Collections Class method ->
+                // HashMap hm = Collections.synchronisedMap(Map m);
+
 public class _HashMap_ {
 
     public static void main(String[] args) {
@@ -111,6 +115,9 @@ public class _HashMap_ {
 
 
 
+        // Getting Synchronised version of Map -> i.e.Thread safe version of Map->
+
+        Map thread_safe_employees_map =Collections.synchronizedMap(employees);
     }
 
 }
