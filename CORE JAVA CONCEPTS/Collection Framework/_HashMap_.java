@@ -62,6 +62,30 @@ public class _HashMap_ {
     public static void main(String[] args) {
 
 
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //  HASH MAP makes use of .equals() to check the duplicate keys //////////////////////////////////////
+        //
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        // Example ->
+        HashMap hashMap = new HashMap();
+
+        Integer i1 =new Integer(10);
+        Integer i2 =new Integer(10);
+
+        hashMap.put(i1,"First");
+        hashMap.put(i2,"Second");
+
+        System.out.println(hashMap);          ////// {10=Second}
+                                                // As .equals() is already overridden in String and Wrapper class for CONTENT COMPARISION!!
+
+        System.out.println(hashMap.size());   /////   1
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
         HashMap<String,Integer> employees = new HashMap<>();
 
         employees.put("Shivam",101);
