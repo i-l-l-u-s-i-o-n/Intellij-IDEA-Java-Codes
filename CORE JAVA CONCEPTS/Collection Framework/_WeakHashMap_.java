@@ -39,6 +39,8 @@ public class _WeakHashMap_ {
         // We can check this as finalise() will not be called!
         // So no Output.
 
+
+        System.out.println(hashMap);          // {Temp=Temp}
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -56,11 +58,9 @@ public class _WeakHashMap_ {
         // Now calling GC to destroy temp object and it will be destroyed.
         Thread.sleep(2000);
 
-        System.gc();                 // It will call the finalize()
+        System.gc();                 // Garbage Collector called!! (It will call the finalize())
 
-
-        // OUTPUT -> Garbage Collector called!!
-
+        System.out.println(weakHashMap);          // {}         (As the key is removed so value is also removed!!)
 
 
     }
