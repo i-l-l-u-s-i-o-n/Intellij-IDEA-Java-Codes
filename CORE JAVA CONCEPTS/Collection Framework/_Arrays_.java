@@ -91,5 +91,12 @@ public class _Arrays_ {
         System.out.println(list);               // [e, d, cc, b, a]
 
         System.out.println(Arrays.toString(s)); // [e, d, cc, b, a]
+
+        s[2]="c";  // It will also reflect change in list.
+
+        System.out.println(Arrays.toString(s)); // [e, d, c, b, a]
+
+        System.out.println(list);               // [e, d, c, b, a]
+
     }
 }
