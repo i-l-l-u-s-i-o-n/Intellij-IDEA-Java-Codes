@@ -27,5 +27,25 @@ public class _03_Type_Casting {
         String n1= names.get(0);
         String n2= names.get(1);
 
+
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        ArrayList<String>  list = new ArrayList<String>();
+
+        // In above line ->
+            // ArrayList ->BaseType
+            // String -> Parameter Type
+
+        // Polymorphism concept is applicable only for BaseType not for Parameter Types.
+
+        // List<String> list = new List<String>();  is VALID.
+
+        // ArrayList<Object> list = new ArrayList<String>();   is NOT VALID.
+        //           ------                       ------
+        // Parameter Type MUST be SAME!!!!!!!!
+
+        // We can NOT provide Parameter as PRIMITIVE Type, else it will give CTE!
+        // List<int>  list  =  new List<int>();              Not Valid.
+
     }
 }
