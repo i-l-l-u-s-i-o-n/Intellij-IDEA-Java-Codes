@@ -30,7 +30,7 @@ class Test {
         System.out.println("Class name : "+ obj.getClass().getName());
     }
 
-    public <T extends Number & Runnable> void numberRunnable(T string){
+    public <T extends Number & Runnable> void numberRunnable(T obj){
         System.out.println("Only params, that are child of Number and implements Runnable, are applicable.");
     }
 
