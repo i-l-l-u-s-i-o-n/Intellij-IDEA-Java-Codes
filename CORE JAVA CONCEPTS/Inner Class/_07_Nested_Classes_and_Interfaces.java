@@ -35,6 +35,8 @@ class University{
 
 class VehicleType{
 
+
+    // Interface inside a class is always STATIC but need not be PUBLIC.
     interface Vehicle{
         int getNoOfWheels();
     }
@@ -69,7 +71,7 @@ interface Map_{
 
     void m1();
 
-    // Inner interface is always PUBLIC STATIC.
+    // Inner interface is always PUBLIC STATIC as it must be available to the class for implementation.
 
     interface Entry{
 
@@ -123,6 +125,8 @@ interface EmailService{
 
 
     // EmailDetails class is required only for EmailService interface , not anywhere else, so it is declared inside Interface.
+
+    // Class defined inside Interface is always PUBLIC STATIC!!!!!!!!!!!!!!!!!!!
     class EmailDetails{
 
         String to;
@@ -130,5 +134,39 @@ interface EmailService{
         String cc_list;
         String subject;
         String body;
+    }
+}
+
+// We can also define Class inside an interface when we want to provide default implementation to the interface methods.
+// As the class defined inside interface is public static, so we can directly use default implementation class.
+
+interface  Vehicle{
+
+    int getNoOfWheel();
+
+    class DefaultVehicle implements Vehicle{
+
+        // Generally We talk about vehicle, most common is Two Wheeler, so default vehicle will return 2 as no. of wheel
+        public int getNoOfWheel() {
+            return 2;
+        }
+    }
+}
+
+class Bus implements  Vehicle{
+
+    public static void main(String[] args) {
+
+        Vehicle.DefaultVehicle defaultVehicle =new Vehicle.DefaultVehicle();
+        System.out.println(defaultVehicle.getNoOfWheel());      // 2
+
+        Bus bus = new Bus();
+        System.out.println(bus.getNoOfWheel());                 // 6
+
+    }
+
+    @Override
+    public int getNoOfWheel() {
+        return 6;
     }
 }
