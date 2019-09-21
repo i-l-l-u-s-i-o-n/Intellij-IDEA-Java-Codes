@@ -22,14 +22,32 @@ class Outer__{
 
     // If the method is NON STATIC, then we can access both( instance and static members) from MLIC.
     // But if method is STATIC, MLIC can't access the NON STATIC members.
+
+
+
     public void m1(){
 
+
+        // Till jdk 1.7v , We can't access local member of the method inside the class, which is defined inside that method!!!!!
+        // To access local member of that method, we MUST declare it as FINAL.
+
+        int x=78;   // We can't access x inside Class Inner if using jdk 1.7v!!!!! From 1.8v we can access but CAN'T modify its value!!!!
+
+        final int y= 78;  // We can access this inside Inner class.
+
+
+        // Local variables are stored on Stack and objects on heap.
+
+        // Only applicable modifiers for MLIC are FINAL, ABSTRACT, and STRICTFP. If we try to use any other modifier, we will get CE!!!!
         class Inner {
 
             public void sum(int i,int j){
                 System.out.println(i+j);
             }
 
+            public void showY(){
+                System.out.println(y);
+            }
         }
 
         Inner i =new Inner();
@@ -39,6 +57,8 @@ class Outer__{
         i.sum(100,200);
 
         i.sum(1000,2000);
+
+        i.showY();
     }
 
 
